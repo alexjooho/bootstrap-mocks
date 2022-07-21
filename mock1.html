@@ -10,13 +10,13 @@
 
 <body>
   <br>
-  <div class="container">
-    <div class="row">
+  <!-- <div class="container">  // in solution they put entire thing in one container (up to line 34)
+    <div class="row">           // don't need to put it in a row or make a column because it will take up whole container anyways
       <div class="col alert alert-success">Successfully logged in.</div>
     </div>
   </div>
-  <div class="container bg-light">
-    <div class="row justify-content-center">
+  <div class="container bg-light">   // lines 18-34 were all in one div class  // this way you don't need a new container and it's all contained with the bg
+    <div class="row justify-content-center">  
       <div class="col text-center">
         <h1>Welcome to our website!</h1>
       </div>
@@ -28,41 +28,50 @@
     </div>
     <div class="row justify-content-center text-center">
       <a class = "col-1 btn btn-primary mx-1 btn-sm" href="#">Go!</a>
-      <a class = "col-1 btn btn-warning mx-1" href="#">Warning!</a>
-      <a class = "col-1 btn btn-outline-danger mx-1" href="#">Danger!</a>
+      <a class = "col-2 col-md-1 btn btn-warning mx-1" href="#">Warning!</a>
+      <a class = "col-2 col-md-1 btn btn-outline-danger mx-1" href="#">Danger!</a>
     </div>
-  </div>
-  </div>
-  <div class = "container my-3 d-xs-none">
-  <h3>
-    Let's look at some random pictures!
-    <small>from https://picsum.photos/</small>
-  </h3>
-</div>
-  <div class = "container">
-    <div class = "row">
-    <div class = "col mx-3 pb-3">
-      <img class = "img-thumbnail d-block mb-3" src="https://picsum.photos/300/230">
-      <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat,
-      quo, qui illum voluptatibus esse corporis aut quia deserunt voluptatem.
+  </div> -->
+
+  <div class="container">
+    <div class="alert alert-success">Successfully logged in.</div>
+
+    <div class="text-center bg-light border rounded-3 pt-4 pb-4 mb-3">
+      <!-- these were all separated because they were in different elements-->
+      <!-- since this class was around this whole area (lines 39-48), everything was text-centered  (justify-content-center would not work)-->
+      <h1>Welcome to our website!</h1>
+      <p class="lead">
+        <!-- this will make it stand out more-->
+        Look at these buttons:
+      </p>
+      <a href="#" class="btn btn-primary">Go!</a> <!-- don't need a column class because they have their own size-->
+      <a href="#" class="btn btn-warning">Warning!</a>
+      <a href="#" class="btn btn-outline-danger">Danger!</a>
     </div>
+    <div class="my-3 d-none d-md-block">
+      <!-- good to know d-none! in solution they put this all in the above container! STOP MAKING EXTRA CONTAINERS-->
+      <h3>
+        Let's look at some random pictures!
+        <small>from https://picsum.photos/</small>
+      </h3>
     </div>
-    <div class = "col mx-3 pb-3">
-      <img class = "img-thumbnail d-block mb-3" src="https://picsum.photos/300/230">
-      <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat,
-      quo, qui illum voluptatibus esse corporis aut quia deserunt voluptatem.
-    </div>
-    </div>
-    <div class = "col mx-3 pb-3">
-      <img class = "img-thumbnail d-block mb-3" src="https://picsum.photos/300/230">
-      <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat,
-      quo, qui illum voluptatibus esse corporis aut quia deserunt voluptatem.
-    </div>
-    </div>
-  </div>
+      <div class="row">
+        <div class="col-md-4 pb-3">
+          <img class="img-thumbnail d-block mb-3" src="https://picsum.photos/300/230">  <!-- they used img-thumbnail instead of img-fluid -->
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat,
+            quo, qui illum voluptatibus esse corporis aut quia deserunt voluptatem.
+        </div>
+        <div class="col-md-4 pb-3">  <!-- It was going onto next line because I used to have mx-4, which would make it take up more than 12 col-->
+          <img class="img-thumbnail d-block mb-3" src="https://picsum.photos/300/230">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat,
+            quo, qui illum voluptatibus esse corporis aut quia deserunt voluptatem.
+        </div>
+        <div class="col-md-4 pb-3">
+          <img class="img-thumbnail d-block mb-3" src="https://picsum.photos/300/230">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat,
+            quo, qui illum voluptatibus esse corporis aut quia deserunt voluptatem.
+        </div>
+      </div>
   </div>
   </div>
 </body>
